@@ -1,4 +1,8 @@
-Downloads are in the Assets folder.
+#Updated to 1.21.4   use the drop down that says Master to obtain access to the latest version.
+
+Downloads are in the Assets folder 
+
+
 Has only been tested with FABRIC 1.21.4 !!!!!!
 # Preventer
 Preventer is a collection of **over fifty** modules who prevent you from doing certain actions (e.g. accidentally breaking budding amethyst or stripping logs).
