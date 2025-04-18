@@ -1,8 +1,8 @@
 plugins {
-    id 'fabric-loom' version '1.7-SNAPSHOT'
+    id 'fabric-loom' version '1.10.0-alpha.18'
     id 'maven-publish'
 }
-
+// Latest version of loom ist
 version = project.mod_version
 group = project.maven_group
 

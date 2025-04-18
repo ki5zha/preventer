@@ -169,7 +169,7 @@ public class UseBlockEvent {
             }
 
             if (PreventerClient.config.preventRocketUse && !playerEntity.isSpectator()) {
-                if (!playerEntity.isFallFlying() && handItem instanceof FireworkRocketItem && playerEntity.getWorld().isClient) {
+                if (!(playerEntity.getWorld().isClient)) {
                     if (canNotInteractWithBlock(targetBlockState, playerEntity, hand, blockHitResult)) {
                         if (PreventerClient.config.rocketInOffhand && Hand.OFF_HAND == hand) {
                             if (PreventerClient.config.preventRocketUse_msg) {
