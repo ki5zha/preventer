@@ -1,12 +1,10 @@
-#Updated to 1.21.4   use the drop down that says Master to obtain access to the latest version.
 
-Downloads are in the Assets folder 
-
-
-Has only been tested with FABRIC 1.21.4 !!!!!!
 # Preventer
 Preventer is a collection of **over fifty** modules who prevent you from doing certain actions (e.g. accidentally breaking budding amethyst or stripping logs).
 Each module can be enabled or disabled individually in game via a config screen (press `I`) or all modules can be temporarily disabled with the _Override Key_ (hold `R`) .
+
+## Downloads for this fork are located to your right under Releases.
+## Source Code is under 1.21.4 in the versions.
 
 ## Modules (Preventer 1.2.4)
 <details open>
@@ -157,6 +155,7 @@ Each module can be enabled or disabled individually in game via a config screen 
 
 | Minecraft version   | Latest preventer version |
 |---------------------|--------------------------|
+| Fabric 1.21.4       | 1.21.4                   |
 | Fabric 1.21.x       | 1.2                      |
 | Fabric 1.20.[5-6]   | 1.1                      |
 | Fabric 1.20.[3-4]🚩 | 1.1                      |
