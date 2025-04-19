@@ -8,7 +8,7 @@ Has only been tested with FABRIC 1.21.4 !!!!!!
 Preventer is a collection of **over fifty** modules who prevent you from doing certain actions (e.g. accidentally breaking budding amethyst or stripping logs).
 Each module can be enabled or disabled individually in game via a config screen (press `I`) or all modules can be temporarily disabled with the _Override Key_ (hold `R`) .
 
-## Modules (Preventer 1.2.1)
+## Modules (Preventer 1.2.4)
 <details open>
 <summary><b> Interactions </b></summary>
 
