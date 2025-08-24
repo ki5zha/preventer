@@ -258,5 +258,17 @@
   "tooltip.preventer.hideTotem": "Versteckt das Totem der\nUnsterblichkeit in der Nebenhand",
 
   "option.preventer.hideShield": "Versteckt das Schild",
-  "tooltip.preventer.hideShield": "Versteckt das Schild in der Nebenhand"
+  "tooltip.preventer.hideShield": "Versteckt das Schild in der Nebenhand",
+
+  "option.preventer.preventSlimeBlockBreaking": "Prevent SlimeBlock Breaking",
+  "tooltip.preventer.preventSlimeBlockBreaking": "Prevents you from punching Slime Blocks",
+  "config.preventer.preventSlimeBlockBreaking.text": "§4SlimeBlock Punching prevented§4",
+
+  "option.preventer.preventHoneyBlockBreaking": "Prevent HoneyBlock Punching",
+  "tooltip.preventer.preventHoneyBlockBreaking": "Prevents honey block breaking by punching it",
+  "config.preventer.preventHoneyBlockBreaking.text": "§4Honey Block Breaking prevented§4",
+
+  "option.preventer.preventOreBreaking": "Prevent Ore Breaking",
+  "tooltip.preventer.preventOreBreaking": "Prevents you from mining ores",
+  "config.preventer.preventOreBreaking.text": "§4Ore Breaking Prevented§4"
 }

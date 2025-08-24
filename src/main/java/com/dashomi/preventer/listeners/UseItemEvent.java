@@ -14,14 +14,14 @@ public class UseItemEvent {
         if (PreventerClient.getPrevent()) {
             Item handItem = player.getStackInHand(hand).getItem();
             if (PreventerClient.config.preventRenamedItemUsing) {
-                if (player.getStackInHand(hand).get(DataComponentTypes.FOOD) != null ) {
+                //if (player.getStackInHand(hand).get(DataComponentTypes.FOOD) != null ) {
                     if (player.getStackInHand(hand).get(DataComponentTypes.CUSTOM_NAME) != null) {
                         if (PreventerClient.config.preventRenamedItemUsing_msg) {
                             player.sendMessage(Text.translatable("config.preventer.preventRenamedItemUsing.text"), true);
                         }
                         return ActionResult.FAIL;
                     }
-                }
+                //}
             }
 
             if (PreventerClient.config.preventPlaceAfterEating) {

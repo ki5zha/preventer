@@ -38,7 +38,7 @@ public class AttackEntityEvent {
 
                 }
             }
-
+			
             if (PreventerClient.config.preventEndCrystalHitting) {
                 if (entity instanceof EndCrystalEntity) {
                     if (PreventerClient.config.preventEndCrystalHitting_msg) {
@@ -158,7 +158,7 @@ public class AttackEntityEvent {
                     entity instanceof IronGolemEntity ||
                     entity instanceof LlamaEntity ||
                     entity instanceof PandaEntity ||
-                    entity instanceof PiglinEntity ||
+//                    entity instanceof PiglinEntity ||
                     entity instanceof PolarBearEntity ||
                     entity instanceof WolfEntity ||
                     entity instanceof ZombifiedPiglinEntity

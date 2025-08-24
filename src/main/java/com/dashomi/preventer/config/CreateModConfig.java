@@ -293,7 +293,8 @@ public class  CreateModConfig {
                         .setTooltip(Text.translatable("tooltip.preventer.preventImmatureAmethystBreaking"))
                         .setSaveConsumer(value -> config.preventImmatureAmethystBreaking = value)
                         .build())
-
+                
+               
                 .addEntry(entryBuilder.startBooleanToggle(
                                 Text.translatable("option.preventer.preventBreakingWithWeapon"),
                                 config.preventBreakingWithWeapon)
@@ -301,7 +302,96 @@ public class  CreateModConfig {
                         .setTooltip(Text.translatable("tooltip.preventer.preventBreakingWithWeapon"))
                         .setSaveConsumer(value -> config.preventBreakingWithWeapon = value)
                         .build())
-
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventSlimeBlockBreaking"),
+                                config.preventSlimeBlockBreaking)
+                        .setDefaultValue(false)
+                        .setTooltip(Text.translatable("tooltip.preventer.preventSlimeBlockBreaking"))
+                        .setSaveConsumer(value -> config.preventSlimeBlockBreaking = value)
+                        .build())
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventHoneyBlockBreaking"),
+                                config.preventHoneyBlockBreaking)
+                        .setDefaultValue(false)
+                        .setTooltip(Text.translatable("tooltip.preventer.preventHoneyBlockBreaking"))
+                        .setSaveConsumer(value -> config.preventHoneyBlockBreaking = value)
+                        .build())
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventOreBreaking"),
+                                config.preventOreBreaking)
+                        .setDefaultValue(false)
+                        .setTooltip(Text.translatable("tooltip.preventer.preventOreBreaking"))
+                        .setSaveConsumer(value -> config.preventOreBreaking = value)
+                        .build())
+                
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventdiamondOreBreaking"),
+                                config.preventdiamondOreBreaking)
+                        .setDefaultValue(false)
+                        .setTooltip(Text.translatable("tooltip.preventer.preventdiamondOreBreaking"))
+                        .setSaveConsumer(value -> config.preventdiamondOreBreaking = value)
+                        .build())
+                
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventemeraldOreBreaking"),
+                                config.preventemeraldOreBreaking)
+                        .setDefaultValue(false)
+                        .setTooltip(Text.translatable("tooltip.preventer.preventemeraldOreBreaking"))
+                        .setSaveConsumer(value -> config.preventemeraldOreBreaking = value)
+                        .build())
+                
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventredstoneOreBreaking"),
+                                config.preventredstoneOreBreaking)
+                        .setDefaultValue(false)
+                        .setTooltip(Text.translatable("tooltip.preventer.preventredstoneOreBreaking"))
+                        .setSaveConsumer(value -> config.preventredstoneOreBreaking = value)
+                        .build())
+                
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventlapisOreBreaking"),
+                                config.preventlapisOreBreaking)
+                        .setDefaultValue(false)
+                        .setTooltip(Text.translatable("tooltip.preventer.preventlapisOreBreaking"))
+                        .setSaveConsumer(value -> config.preventlapisOreBreaking = value)
+                        .build())
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventquartzOreBreaking"),
+                                config.preventquartzOreBreaking)
+                        .setDefaultValue(false)
+                        .setTooltip(Text.translatable("tooltip.preventer.preventquartzOreBreaking"))
+                        .setSaveConsumer(value -> config.preventquartzOreBreaking = value)
+                        .build())
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventgoldOreBreaking"),
+                                config.preventgoldOreBreaking)
+                        .setDefaultValue(false)
+                        .setTooltip(Text.translatable("tooltip.preventer.preventgoldOreBreaking"))
+                        .setSaveConsumer(value -> config.preventgoldOreBreaking = value)
+                        .build())
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventironOreBreaking"),
+                                config.preventironOreBreaking)
+                        .setDefaultValue(false)
+                        .setTooltip(Text.translatable("tooltip.preventer.preventironOreBreaking"))
+                        .setSaveConsumer(value -> config.preventironOreBreaking = value)
+                        .build())
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventcopperOreBreaking"),
+                                config.preventcopperOreBreaking)
+                        .setDefaultValue(false)
+                        .setTooltip(Text.translatable("tooltip.preventer.preventcopperOreBreaking"))
+                        .setSaveConsumer(value -> config.preventcopperOreBreaking = value)
+                        .build())
+                .addEntry(entryBuilder.startBooleanToggle(
+                                Text.translatable("option.preventer.preventcoalOreBreaking"),
+                                config.preventcoalOreBreaking)
+                        .setDefaultValue(false)
+                        .setTooltip(Text.translatable("tooltip.preventer.preventcoalOreBreaking"))
+                        .setSaveConsumer(value -> config.preventcoalOreBreaking = value)
+                        .build())
+                
+                
                 // Placing
                 .addEntry(entryBuilder.startTextDescription(
                                 Text.translatable("text.preventer.placingCategory"))
@@ -476,6 +566,8 @@ public class  CreateModConfig {
                         .setTooltip(Text.translatable("tooltip.preventer.preventSwimming"))
                         .setSaveConsumer(value -> config.preventSwimming = value)
                         .build())
+
+                //.setDefaultValue(false)
 
                 //.addEntry(entryBuilder.startBooleanToggle(
                 //                Text.translatable("option.preventer.preventEnchantedItemBurning"),
