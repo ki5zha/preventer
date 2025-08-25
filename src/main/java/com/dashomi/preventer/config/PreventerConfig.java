@@ -83,8 +83,33 @@ public class PreventerConfig implements ConfigData {
     public boolean preventChestBreaking_msg = false;
     public boolean preventCarpetBreaking = false;
     public boolean preventCarpetBreaking_msg = false;
-
-    // Placing
+	public boolean preventHoneyBlockBreaking = false;
+	public boolean preventHoneyBlockBreaking_msg = false;
+	public boolean preventSlimeBlockBreaking = false;
+	public boolean preventSlimeBlockBreaking_msg = false;
+	public boolean preventOreBreaking = false;
+	public boolean preventOreBreaking_msg = false;
+	public boolean preventdiamondOreBreaking = false;
+	public boolean preventdiamondOreBreaking_msg = false;
+	public boolean preventemeraldOreBreaking = false;
+	public boolean preventemeraldOreBreaking_msg = false;
+	public boolean preventredstoneOreBreaking = false;
+	public boolean preventredstoneOreBreaking_msg = false;
+	public boolean preventquartzOreBreaking = false;
+	public boolean preventquartzOreBreaking_msg = false;
+	public boolean preventgoldOreBreaking = false;
+	public boolean preventgoldOreBreaking_msg = false;
+	public boolean preventcopperOreBreaking = false;
+	public boolean preventcopperOreBreaking_msg = false;
+	public boolean preventironOreBreaking = false;
+	public boolean preventironOreBreaking_msg = false;
+	public boolean preventcoalOreBreaking = false;
+	public boolean preventcoalOreBreaking_msg = false;
+	public boolean preventlapisOreBreaking = false;
+	public boolean preventlapisOreBreaking_msg = false;
+	
+	
+	// Placing
     public boolean preventCoralPlace = false;
     public boolean preventCoralPlace_msg = false;
     public boolean preventWaterPlace = false;

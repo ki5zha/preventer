@@ -6,6 +6,7 @@ import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.AxeItem;
+import net.minecraft.item.Item;
 import net.minecraft.item.PickaxeItem;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
@@ -19,9 +20,12 @@ import java.util.Objects;
 import static com.dashomi.preventer.utils.DurabilityProtection.checkDurabilityProtection;
 
 public class AttackBlockEvent {
+	
     public static ActionResult attackBlockListener(PlayerEntity playerEntity, World world, Hand hand, BlockPos pos, Direction direction) {
-        if (!PreventerClient.overrideKeyPressed) {
-            Block targetBlock = world.getBlockState(pos).getBlock();
+	    Block targetBlock = world.getBlockState(pos).getBlock();
+	    String targetblockName = targetBlock.getName().toString().toLowerCase();
+	    Item item = playerEntity.getStackInHand(hand).getItem();
+		if (!PreventerClient.overrideKeyPressed) {
             if (PreventerClient.config.onlyMatureCropHarvest) {
                 if (targetBlock instanceof CropBlock) {
                     if (!((CropBlock) targetBlock).isMature(world.getBlockState(pos))) {
@@ -142,7 +146,133 @@ public class AttackBlockEvent {
 
             if (checkDurabilityProtection(playerEntity, hand)) return ActionResult.FAIL;
         }
-
+	    //additonal features
+	    if (PreventerClient.config.preventSlimeBlockBreaking) {
+		    if (targetBlock instanceof SlimeBlock) {
+			    if (PreventerClient.config.preventSlimeBlockBreaking_msg) {
+				    playerEntity.sendMessage(Text.translatable("config.preventer.preventSlimeBlockBreaking.text"), true);
+			    }
+			    return ActionResult.FAIL;
+			    
+		    }
+	    }
+	    if (PreventerClient.config.preventHoneyBlockBreaking) {
+		    if (targetBlock instanceof HoneyBlock) {
+			    playerEntity.sendMessage(Text.translatable("config.preventer.preventHoneyBlockBreaking.text"), true);
+		    }
+		    return ActionResult.FAIL;
+	    }
+	    if (PreventerClient.config.preventdiamondOreBreaking) {
+		    
+		    if (targetblockName.contains("diamond") && targetblockName.contains("ore")) {
+			    if (!playerEntity.getMainHandStack().getEnchantments().toString().toLowerCase().contains("silk")) {
+				    if (PreventerClient.config.preventdiamondOreBreaking) {
+					    playerEntity.sendMessage(Text.translatable("config.preventer.preventdiamondOreBreaking.text"), true);
+				    }
+				    return ActionResult.FAIL;
+			    }
+		    }
+	    }
+	    if (PreventerClient.config.preventemeraldOreBreaking) {
+		    
+		    if (targetblockName.contains("emerald") && targetblockName.contains("ore")) {
+			    if (!playerEntity.getMainHandStack().getEnchantments().toString().toLowerCase().contains("silk")) {
+				    if (PreventerClient.config.preventemeraldOreBreaking) {
+					    playerEntity.sendMessage(Text.translatable("config.preventer.preventemeraldOreBreaking.text"), true);
+				    }
+				    return ActionResult.FAIL;
+			    }
+		    }
+	    }
+	    if (PreventerClient.config.preventredstoneOreBreaking) {
+		    
+		    if (targetblockName.contains("redstone") && targetblockName.contains("ore")) {
+			    if (!playerEntity.getMainHandStack().getEnchantments().toString().toLowerCase().contains("silk")) {
+				    if (PreventerClient.config.preventredstoneOreBreaking) {
+					    playerEntity.sendMessage(Text.translatable("config.preventer.preventredstoneOreBreaking.text"), true);
+				    }
+				    return ActionResult.FAIL;
+			    }
+		    }
+	    }
+	    if (PreventerClient.config.preventlapisOreBreaking) {
+		    
+		    if (targetblockName.contains("lapis") && targetblockName.contains("ore")) {
+			    if (!playerEntity.getMainHandStack().getEnchantments().toString().toLowerCase().contains("silk")) {
+				    if (PreventerClient.config.preventlapisOreBreaking) {
+					    playerEntity.sendMessage(Text.translatable("config.preventer.preventlapisOreBreaking.text"), true);
+				    }
+				    return ActionResult.FAIL;
+			    }
+		    }
+	    }
+	    if (PreventerClient.config.preventquartzOreBreaking) {
+		    
+		    if (targetblockName.contains("quartz") && targetblockName.contains("ore")) {
+			    if (!playerEntity.getMainHandStack().getEnchantments().toString().toLowerCase().contains("silk")) {
+				    if (PreventerClient.config.preventquartzOreBreaking) {
+					    playerEntity.sendMessage(Text.translatable("config.preventer.preventquartzOreBreaking.text"), true);
+				    }
+				    return ActionResult.FAIL;
+			    }
+		    }
+	    }
+	    if (PreventerClient.config.preventgoldOreBreaking) {
+		    if ((targetblockName.contains("gold") || targetblockName.contains("gilded")) && targetblockName.contains("ore")) {
+			    if (!playerEntity.getMainHandStack().getEnchantments().toString().toLowerCase().contains("silk")) {
+				    if (PreventerClient.config.preventgoldOreBreaking) {
+					    playerEntity.sendMessage(Text.translatable("config.preventer.preventgoldOreBreaking.text"), true);
+				    }
+				    return ActionResult.FAIL;
+			    }
+		    }
+	    }
+	    if (PreventerClient.config.preventironOreBreaking) {
+		    
+		    if (targetblockName.contains("iron") && targetblockName.contains("ore")) {
+			    if (!playerEntity.getMainHandStack().getEnchantments().toString().toLowerCase().contains("silk")) {
+				    if (PreventerClient.config.preventironOreBreaking) {
+					    playerEntity.sendMessage(Text.translatable("config.preventer.preventironOreBreaking.text"), true);
+				    }
+				    return ActionResult.FAIL;
+			    }
+		    }
+	    }
+	    if (PreventerClient.config.preventcopperOreBreaking) {
+		    
+		    if (targetblockName.contains("copper") && targetblockName.contains("ore")) {
+			    if (!playerEntity.getMainHandStack().getEnchantments().toString().toLowerCase().contains("silk")) {
+				    if (PreventerClient.config.preventcopperOreBreaking) {
+					    playerEntity.sendMessage(Text.translatable("config.preventer.preventcopperOreBreaking.text"), true);
+				    }
+				    return ActionResult.FAIL;
+			    }
+		    }
+	    }
+	    if (PreventerClient.config.preventcoalOreBreaking) {
+		    
+		    if (targetblockName.contains("coal") && targetblockName.contains("ore")) {
+			    if (!playerEntity.getMainHandStack().getEnchantments().toString().toLowerCase().contains("silk")) {
+				    if (PreventerClient.config.preventcoalOreBreaking) {
+					    playerEntity.sendMessage(Text.translatable("config.preventer.preventcoalOreBreaking.text"), true);
+				    }
+				    return ActionResult.FAIL;
+			    }
+		    }
+	    }
+	    
+	    
+	    //this needs to be last to catch if all ores are prevented
+	    if (PreventerClient.config.preventOreBreaking) {
+		    if (targetBlock.getName().toString().toLowerCase().contains("ore")) {
+			    if (!playerEntity.getMainHandStack().getEnchantments().toString().toLowerCase().contains("silk")) {
+				    if (PreventerClient.config.preventOreBreaking) {
+					    playerEntity.sendMessage(Text.translatable("config.preventer.preventOreBreaking.text"), true);
+				    }
+				    return ActionResult.FAIL;
+			    }
+		    }
+	    }
         return ActionResult.PASS;
     }
 }

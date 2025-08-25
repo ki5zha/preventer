@@ -206,6 +206,54 @@
   "option.preventer.preventGrassBonemeal": "Prevent grass block bone mealing",
   "tooltip.preventer.preventGrassBonemeal": "Prevents you from using bone meal on grass blocks",
   "config.preventer.preventGrassBonemeal.text": "§4Grass block bone mealing prevented§4",
+  "option.preventer.preventSlimeBlockBreaking": "Prevent Slime Block Breaking",
+  "tooltip.preventer.preventSlimeBlockBreaking": "Prevents you from punching Slime Blocks",
+  "config.preventer.preventSlimeBlockBreaking.text": "§4SlimeBlock Punching prevented§4",
+
+  "option.preventer.preventHoneyBlockBreaking": "Prevent HoneyBlock Punching",
+  "tooltip.preventer.preventHoneyBlockBreaking": "Prevents honey block breaking by punching it",
+  "config.preventer.preventHoneyBlockBreaking.text": "§4Honey Block Breaking prevented§4",
+
+  "option.preventer.preventOreBreaking": "Prevent All Ore Breaking",
+  "tooltip.preventer.preventOreBreaking": "Prevents you from breaking ALL ores set false to use individual",
+  "config.preventer.preventOreBreaking.text": "§4Ore Breaking Prevented§4",
+
+  "option.preventer.preventdiamondOreBreaking": "Prevent diamond Ore Breaking",
+  "tooltip.preventer.preventdiamondOreBreaking": "Prevents you from breaking diamond ores",
+  "config.preventer.preventdiamondOreBreaking.text": "§4 diamond Ore Breaking Prevented§4",
+
+
+  "option.preventer.preventemeraldOreBreaking": "Prevent emerald Ore Breaking",
+  "tooltip.preventer.preventemeraldOreBreaking": "Prevents you from breaking emerald ores",
+  "config.preventer.preventemeraldOreBreaking.text": "§4 emerald Ore Breaking Prevented§4",
+
+  "option.preventer.preventredstoneOreBreaking": "Prevent redstone Ore Breaking",
+  "tooltip.preventer.preventredstoneOreBreaking": "Prevents you from breaking redstone ores",
+  "config.preventer.preventredstoneOreBreaking.text": "§4 redstone Ore Breaking Prevented§4",
+
+  "option.preventer.preventlapisOreBreaking": "Prevent lapis Ore Breaking",
+  "tooltip.preventer.preventlapisOreBreaking": "Prevents you from breaking lapis ores",
+  "config.preventer.preventlapisOreBreaking.text": "§4 lapis Ore Breaking Prevented§4",
+
+  "option.preventer.preventquartzOreBreaking": "Prevent quartz Ore Breaking",
+  "tooltip.preventer.preventquartzOreBreaking": "Prevents you from breaking quartz ores",
+  "config.preventer.preventquartzOreBreaking.text": "§4 quartz Ore Breaking Prevented§4",
+
+  "option.preventer.preventgoldOreBreaking": "Prevent gold Ore Breaking",
+  "tooltip.preventer.preventgoldOreBreaking": "Prevents you from breaking gold ores",
+  "config.preventer.preventgoldOreBreaking.text": "§4 gold Ore Breaking Prevented§4",
+
+  "option.preventer.preventcopperOreBreaking": "Prevent copper Ore Breaking",
+  "tooltip.preventer.preventcopperOreBreaking": "Prevents you from breaking copper ores",
+  "config.preventer.preventcopperOreBreaking.text": "§4 copper Ore Breaking Prevented§4",
+
+  "option.preventer.preventcoalOreBreaking": "Prevent coal Ore Breaking",
+  "tooltip.preventer.preventcoalOreBreaking": "Prevents you from breaking coal ores",
+  "config.preventer.preventcoalOreBreaking.text": "§4 coal Ore Breaking Prevented§4",
+
+  "option.preventer.preventironOreBreaking": "Prevent iron Ore Breaking",
+  "tooltip.preventer.preventironOreBreaking": "Prevents you from breaking iron ores",
+  "config.preventer.preventironOreBreaking.text": "§4 iron Ore Breaking Prevented§4",
 
 
   "option.preventer.hideTotem": "Hide totem",

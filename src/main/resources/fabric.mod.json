@@ -33,7 +33,8 @@
   "suggests": {
     "modmenu": ">=7.0.0"
   },
-  "accessWidener": "preventer.accesswidener",
+
+    "accessWidener": "preventer.accesswidener",
   "custom": {
     "modmenu": {
       "links": {

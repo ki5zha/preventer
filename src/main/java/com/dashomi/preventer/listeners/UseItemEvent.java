@@ -17,7 +17,8 @@ public class UseItemEvent {
             if (PreventerClient.config.preventRenamedItemUsing) {
                 if (handItem.isFood()) {
                     if (player.getStackInHand(hand).hasCustomName()) {
-                        if (PreventerClient.config.preventRenamedItemUsing_msg) {
+						if (PreventerClient.config.preventRenamedItemUsing_msg) {
+							
                             player.sendMessage(Text.translatable("config.preventer.preventRenamedItemUsing.text"), true);
                         }
                         return TypedActionResult.fail(player.getStackInHand(hand));
