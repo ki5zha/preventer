@@ -1,5 +1,5 @@
 plugins {
-    id 'fabric-loom' version '1.3-SNAPSHOT'
+    id 'fabric-loom' version '1.11-SNAPSHOT'
     id 'maven-publish'
 }
 
@@ -38,7 +38,7 @@ processResources {
     }
 }
 
-def targetJavaVersion = 17 //changed back to 17
+def targetJavaVersion = 21
 tasks.withType(JavaCompile).configureEach {
     // ensure that the encoding is set to UTF-8, no matter what the system default is
     // this fixes some edge cases with special characters not displaying correctly
@@ -90,6 +90,19 @@ publishing {
     }
 }
 
+// Add this after your other tasks, before the closing brace
+tasks.register('installMod') {
+    dependsOn 'remapJar'
+    doLast {
+        copy {
+            from "build/libs/${archivesBaseName}-${version}.jar"
+            into "D:/25USERS/Library/AppData/Roaming/PrismLauncher/instances/1.21.1/minecraft/mods"
+        }
+        println "Mod installed to PrismLauncher mods folder"
+    }
+}
+
+
 loom {
-  accessWidenerPath = file("src/main/resources/preventer.accesswidener")
+    accessWidenerPath = file("src/main/resources/preventer.accesswidener")
 }

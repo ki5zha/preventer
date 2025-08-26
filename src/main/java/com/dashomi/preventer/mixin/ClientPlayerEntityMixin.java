@@ -18,16 +18,24 @@ public class ClientPlayerEntityMixin {
             ItemStack itemStack = clientPlayerEntity.getMainHandStack();
 
             if (PreventerClient.config.preventToolDropping) {
-                if (itemStack.getItem().isDamageable()) {
+                if (itemStack.hasGlint()) {
                     if (PreventerClient.config.preventToolDropping_msg) {
                         clientPlayerEntity.sendMessage(Text.translatable("config.preventer.preventToolDropping.text"), true);
                     }
                     cir.setReturnValue(false);
                 }
             }
+			if(PreventerClient.config.preventBucketThrowing){
+				if(itemStack.getItem() instanceof BucketItem){
+					if(PreventerClient.config.preventBucketThrowing_msg){
+						clientPlayerEntity.sendMessage(Text.translatable("config.preventer.preventBucketThrowing.text"), true);
+					}
+					cir.setReturnValue(false);
+				}
+			}
 
             if (PreventerClient.config.preventRenamedItemDropping) {
-                if (itemStack.hasCustomName()) {
+                if (itemStack.getCustomName() != null) {
                     if (PreventerClient.config.preventRenamedItemDropping_msg) {
                         clientPlayerEntity.sendMessage(Text.translatable("config.preventer.preventRenamedItemDropping.text"), true);
                     }

@@ -13,7 +13,18 @@ public class  CreateModConfig {
 
         ConfigEntryBuilder entryBuilder = builder.entryBuilder();
         PreventerConfig config = PreventerConfig.get();
-
+		builder.getOrCreateCategory(Text.of("FunStuff"))
+						.addEntry(entryBuilder.startTextDescription(Text.of("debug mode"))
+								
+								.build())
+		//debug
+	    .addEntry(entryBuilder.startBooleanToggle(Text.translatable("turn debug mode on "),
+			    config.debugmode)
+			    .setDefaultValue(false)
+			    .setTooltip(Text.of("turns debug mode on or off"))
+					    .setSaveConsumer(value -> config.debugmode = value)
+			    .build());
+	    
         builder.getOrCreateCategory(Text.translatable("category.preventer.default"))
                 // Interaction
                 .addEntry(entryBuilder.startTextDescription(
@@ -125,12 +136,41 @@ public class  CreateModConfig {
                         .build())
 
                 .addEntry(entryBuilder.startBooleanToggle(
-                                Text.translatable("option.preventer.preventGrassBonemeal"),
-                                config.preventGrassBonemeal)
+                                Text.translatable("option.preventer.preventArmorStandbreaking"),
+                                config.preventArmorStandbreaking)
                         .setDefaultValue(false)
-                        .setTooltip(Text.translatable("tooltip.preventer.preventGrassBonemeal"))
-                        .setSaveConsumer(value -> config.preventGrassBonemeal = value)
+                        .setTooltip(Text.translatable("tooltip.preventer.preventArmorStandbreaking"))
+                        .setSaveConsumer(value -> config.preventArmorStandbreaking = value)
                         .build())
+		        
+		        .addEntry(entryBuilder.startBooleanToggle(
+						        Text.translatable("option.preventer.preventArmorStandStashing"),
+						        config.preventArmorStandStashing)
+				        .setDefaultValue(false)
+				        .setTooltip(Text.translatable("tooltip.preventer.preventArmorStandStashing"))
+				        .setSaveConsumer(value -> config.preventArmorStandStashing = value)
+				        .build())
+		        .addEntry(entryBuilder.startBooleanToggle(
+						        Text.translatable("option.preventer.preventItemIntoJarTossing"),
+						        config.preventItemIntoJarTossing)
+				        .setDefaultValue(false)
+				        .setTooltip(Text.translatable("tooltip.preventer.preventItemIntoJarTossing"))
+				        .setSaveConsumer(value -> config.preventItemIntoJarTossing = value)
+				        .build())
+		        .addEntry(entryBuilder.startBooleanToggle(
+						        Text.translatable("option.preventer.preventJarBreaking"),
+						        config.preventJarBreaking)
+				        .setDefaultValue(false)
+				        .setTooltip(Text.translatable("tooltip.preventer.preventJarBreaking"))
+				        .setSaveConsumer(value -> config.preventJarBreaking = value)
+				        .build())
+		        .addEntry(entryBuilder.startBooleanToggle(
+						        Text.translatable("option.preventer.preventBucketThrowing"),
+						        config.preventBucketThrowing)
+				        .setDefaultValue(false)
+				        .setTooltip(Text.translatable("tooltip.preventer.preventBucketThrowing"))
+				        .setSaveConsumer(value -> config.preventBucketThrowing = value)
+				        .build())
 
                 // Plants
                 .addEntry(entryBuilder.startTextDescription(
@@ -486,7 +526,7 @@ public class  CreateModConfig {
                         .setSaveConsumer(value -> config.preventRenamedItemDropping = value)
                         .build())
 
-                .addEntry(entryBuilder.startBooleanToggle(
+             /**   .addEntry(entryBuilder.startBooleanToggle(
                                 Text.translatable("option.preventer.hideShield"),
                                 config.hideShield)
                         .setDefaultValue(false)
@@ -501,7 +541,7 @@ public class  CreateModConfig {
                         .setTooltip(Text.translatable("tooltip.preventer.hideTotem"))
                         .setSaveConsumer(value -> config.hideTotem = value)
                         .build())
-
+**/
                 .addEntry(entryBuilder.startTextDescription(
                                 Text.translatable("text.preventer.missingFeatures"))
                         .build());

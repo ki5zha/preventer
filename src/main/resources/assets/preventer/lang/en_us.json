@@ -256,6 +256,31 @@
   "config.preventer.preventironOreBreaking.text": "§4 iron Ore Breaking Prevented§4",
 
 
+  "option.preventer.preventBucketThrowing": "Prevented Bucket from being thrown",
+  "tooltip.preventer.preventBucketThrowing": "Prevented Bucket from being thrown",
+  "config.preventer.preventBucketThrowing.text": "Prevented Bucket from being thrown",
+
+  "option.preventer.changeme": "Prevented changeme",
+  "tooltip.preventer.changeme":"Prevents changeme",
+  "config.preventer.changeme.text": "§4 Prevents changeme",
+
+  "option.preventer.preventArmorStandbreaking": "Prevented preventArmorStandbreaking",
+  "tooltip.preventer.preventArmorStandbreaking":"Prevents preventArmorStandbreaking",
+  "config.preventer.preventArmorStandbreaking.text": "§4 Prevents preventArmorStandbreaking",
+
+
+  "option.preventer.preventArmorStandStashing": "Prevented preventArmorStandStashing",
+  "tooltip.preventer.preventArmorStandStashing":"Prevents preventArmorStandStashing",
+  "config.preventer.preventArmorStandStashing.text": "§4 Prevents preventArmorStandStashing",
+
+  "option.preventer.preventItemIntoJarTossing": "Prevented preventItemIntoJarTossing",
+  "tooltip.preventer.preventItemIntoJarTossing":"Prevents preventItemIntoJarTossing",
+  "config.preventer.preventItemIntoJarTossing.text": "§4 Prevents preventItemIntoJarTossing",
+  "option.preventer.preventJarBreaking": "Prevented preventJarBreaking",
+  "tooltip.preventer.preventJarBreaking":"Prevents preventJarBreaking",
+  "config.preventer.preventJarBreaking.text": "§4 Prevents preventJarBreaking",
+
+
   "option.preventer.hideTotem": "Hide totem",
   "tooltip.preventer.hideTotem": "Hides totems of undying in the offhand",
 

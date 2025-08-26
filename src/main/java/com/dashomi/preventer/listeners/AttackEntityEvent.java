@@ -2,6 +2,7 @@ package com.dashomi.preventer.listeners;
 
 import com.dashomi.preventer.PreventerClient;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.decoration.ArmorStandEntity;
 import net.minecraft.entity.decoration.EndCrystalEntity;
 import net.minecraft.entity.decoration.ItemFrameEntity;
 import net.minecraft.entity.decoration.painting.PaintingEntity;
@@ -114,6 +115,14 @@ public class AttackEntityEvent {
                     return ActionResult.FAIL;
                 }
             }
+	        if (PreventerClient.config.preventArmorStandbreaking) {
+		        if (entity instanceof ArmorStandEntity) {
+			        if (PreventerClient.config.preventArmorStandbreaking_msg) {
+				        playerEntity.sendMessage(Text.translatable("config.preventer.preventArmorStandbreaking.text"), true);
+			        }
+			        return ActionResult.FAIL;
+		        }
+	        }
 
             if (PreventerClient.config.preventNeutralMobAttacking) {
                 if (PreventerClient.config.fullNeutralMobAttackingPrevention) {

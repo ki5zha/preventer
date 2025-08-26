@@ -18,7 +18,7 @@ public class PreventerConfig implements ConfigData {
     public static void load() {
         AutoConfig.getConfigHolder(PreventerConfig.class).load();
     }
-
+	public boolean debugmode = false;
     // Interaction
     public boolean noStrip = false;
     public boolean noStrip_msg = false;
@@ -50,6 +50,16 @@ public class PreventerConfig implements ConfigData {
     public boolean preventRespawnAnchorUse_msg = false;
     public boolean preventGrassBonemeal = false;
     public boolean preventGrassBonemeal_msg = false;
+	public boolean preventArmorStandbreaking = false;
+	public boolean preventArmorStandbreaking_msg = false;
+	public boolean preventArmorStandStashing = false;
+	public boolean preventArmorStandStashing_msg = false;
+	public boolean preventItemIntoJarTossing = false;
+	public boolean preventItemIntoJarTossing_msg = false;
+	public boolean preventJarBreaking = false;
+	public boolean preventJarBreaking_msg = false;
+	public boolean preventBucketThrowing = false;
+	public boolean preventBucketThrowing_msg = false;
 
     // Plants
     public boolean noGlowBerrieHarvest = false;
@@ -148,6 +158,6 @@ public class PreventerConfig implements ConfigData {
     public boolean preventToolDropping_msg = false;
     public boolean preventRenamedItemDropping = false;
     public boolean preventRenamedItemDropping_msg = false;
-    public boolean hideShield = false;
-    public boolean hideTotem = false;
+    ;public boolean hideShield = false;
+    ;public boolean hideTotem = false;
 }

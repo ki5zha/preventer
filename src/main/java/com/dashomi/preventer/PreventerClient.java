@@ -22,18 +22,16 @@ public class PreventerClient implements ClientModInitializer {
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
     public static PreventerConfig config;
     public static boolean overrideKeyPressed = false;
-
     @Override
     public void onInitializeClient() {
         AutoConfig.register(PreventerConfig.class, GsonConfigSerializer::new);
         config = PreventerConfig.get();
-
         AttackBlockCallback.EVENT.register(AttackBlockEvent::attackBlockListener);
         AttackEntityCallback.EVENT.register(AttackEntityEvent::attackEntityListener);
         ClientPlayConnectionEvents.JOIN.register(PlayerJoinEvent::playerJoinListener);
         UseBlockCallback.EVENT.register(UseBlockEvent::useBlockListener);
         UseItemCallback.EVENT.register(UseItemEvent::useItemListener);
-        UseEntityCallback.EVENT.register(UseEntityEvent::useEntityListener);
+       UseEntityCallback.EVENT.register(UseEntityEvent::useEntityListener);
 
         RegisterKeyBindings.register();
     }
